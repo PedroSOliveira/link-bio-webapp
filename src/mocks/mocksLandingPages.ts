@@ -37,7 +37,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Desde a escolha do local até a decoração floral, cuidamos de tudo para você.",
           image:
             "https://images.unsplash.com/photo-1526045612212-70caf35c14df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageLeftTextRight,
+          visualization: VisualizationType.IMAGE_LEFT_TEXT_RIGHT,
           button: {
             enabled: true,
             text: "Agende uma Reunião",
@@ -58,7 +58,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Desde a escolha do local até a decoração floral, cuidamos de tudo para você.",
           image:
             "https://images.unsplash.com/photo-1526045612212-70caf35c14df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.textOnlyVertical,
+          visualization: VisualizationType.TEXT_ONLY_VERTICAL,
           button: {
             enabled: true,
             text: "Agende uma Reunião",
@@ -79,7 +79,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Desde a escolha do local até a decoração floral, cuidamos de tudo para você.",
           image:
             "https://images.unsplash.com/photo-1526045612212-70caf35c14df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageRightTextLeft,
+          visualization: VisualizationType.IMAGE_RIGHT_TEXT_LEFT,
           button: {
             enabled: true,
             text: "Agende uma Reunião",
@@ -140,11 +140,10 @@ export const mockLandingPages: LandingPageModel[] = [
         type: SectionType.CONTENT,
         content: {
           title: "Dê o próximo passo",
-          description:
-            "Confira nossos planos e agende uma consulta.",
+          description: "Confira nossos planos e agende uma consulta.",
           image:
             "https://images.unsplash.com/photo-1494475673543-6a6a27143b16?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageLeftTextRight,
+          visualization: VisualizationType.IMAGE_LEFT_TEXT_RIGHT,
           button: {
             text: "Saber mais",
             link: "https://exemplo.com/blog",
@@ -239,7 +238,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Planos de treino feitos sob medida para seus objetivos.",
           image:
             "https://images.unsplash.com/photo-1571019613914-85f342c1d3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageRightTextLeft,
+          visualization: VisualizationType.IMAGE_RIGHT_TEXT_LEFT,
           button: {
             text: "Comece Agora",
             link: "https://exemplo.com/inscricao",
@@ -308,7 +307,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Explore minha coleção de fotos de natureza e paisagens urbanas.",
           image:
             "https://images.unsplash.com/photo-1517726466986-74d32e92c10b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageTopTextBelow,
+          visualization: VisualizationType.IMAGE_TOP_TEXT_BELOW,
           button: {
             text: "Ver Portfólio Completo",
             link: "https://exemplo.com/portfolio",
@@ -371,7 +370,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Baixe nosso e-book com 10 receitas rápidas para o dia a dia.",
           image:
             "https://images.unsplash.com/photo-1542845607-b08e2e2a3b0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageLeftTextRight,
+          visualization: VisualizationType.IMAGE_LEFT_TEXT_RIGHT,
           button: {
             text: "Baixar Agora",
             link: "https://exemplo.com/ebook-vegano",
@@ -440,7 +439,7 @@ export const mockLandingPages: LandingPageModel[] = [
             "Criamos soluções visuais para marcas que querem se destacar.",
           image:
             "https://images.unsplash.com/photo-1522881454530-9753c07e0569?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-          visualization: VisualizationType.imageLeftTextRight,
+          visualization: VisualizationType.IMAGE_LEFT_TEXT_RIGHT,
           button: {
             text: "Fale Conosco",
             link: "https://exemplo.com/contato",
