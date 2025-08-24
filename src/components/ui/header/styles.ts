@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-export const HeaderSectionContainer = styled.div<{}>`
+export const HeaderSectionContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   border-radius: 12px;

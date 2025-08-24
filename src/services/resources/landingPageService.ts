@@ -1,13 +1,18 @@
 import { LandingPageModel } from "@/models/landing-page/LandingPageData";
 import { IHttpClient } from "../ApiInterface";
 
+interface ILandingPageFilter {
+  title?: string;
+  userCode?: string;
+  userId?: string;
+}
 export class LandingPageService {
   constructor(private httpClient: IHttpClient) {}
 
   private baseURL = "/pages";
 
   public getAll = async (
-    params: any | undefined
+    params: ILandingPageFilter | undefined
   ): Promise<LandingPageModel[]> => {
     return this.httpClient.get<LandingPageModel[]>(
       this.baseURL,

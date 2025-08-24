@@ -1,9 +1,9 @@
 "use client";
-import styled, { css } from "styled-components";
-import Image from "next/image"; // Recomenda-se para Next.js
+import styled from "styled-components";
+import Image from "next/image";
 import { MdImageNotSupported } from "react-icons/md";
 
-export const SectionContainer = styled.div<{}>`
+export const SectionContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   padding: 16px;
