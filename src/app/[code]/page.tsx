@@ -1,22 +1,20 @@
-// src/app/pages/[code]/page.tsx
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { LandingPage } from "@/components/ui/landing-page";
 import { LandingPageModel } from "@/models/landing-page/LandingPageData";
-import { allDefaulThemes } from "@/models/theme/ThemeData";
+import { allDefaulThemes, DefaultThemes } from "@/models/theme/ThemeData";
 import { apiService } from "@/services/resources/apiService";
 
 export default function Page() {
   const params = useParams();
   const code = params.code;
 
-  const [landingPageData, setLandingPageData] = useState<LandingPageModel | null>(null);
+  const [landingPageData, setLandingPageData] =
+    useState<LandingPageModel | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  const themeData = allDefaulThemes[11];
 
   useEffect(() => {
     if (typeof code === "string" && code) {
@@ -24,7 +22,6 @@ export default function Page() {
         try {
           setIsLoading(true);
           const data = await apiService.landingPage.getByCode(code);
-          console.log(data);
           setLandingPageData(data);
           setError(null);
         } catch (err) {
@@ -54,7 +51,10 @@ export default function Page() {
   return (
     <LandingPage
       landingPage={landingPageData}
-      theme={themeData}
+      theme={
+        allDefaulThemes.find((theme) => theme.name === landingPageData.theme) ??
+        DefaultThemes.pureWhite
+      }
       isEditing={false}
     />
   );

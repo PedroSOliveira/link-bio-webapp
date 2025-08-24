@@ -6,6 +6,7 @@ import { ILandingPageData } from "./ILandingPageData";
 export class LandingPageModel implements ILandingPageData {
   public id: string;
   public title: string;
+  public theme: string; 
   public slug: string;
   public sections: Section[];
   public visits: number;
@@ -15,6 +16,7 @@ export class LandingPageModel implements ILandingPageData {
   constructor({
     id,
     title,
+    theme,
     slug,
     sections,
     visits = 0,
@@ -23,6 +25,7 @@ export class LandingPageModel implements ILandingPageData {
   }: {
     id: string;
     title: string;
+    theme: string;
     slug: string;
     sections: Section[];
     visits?: number;
@@ -31,6 +34,7 @@ export class LandingPageModel implements ILandingPageData {
   }) {
     this.id = id;
     this.title = title;
+    this.theme = theme;
     this.slug = slug;
     this.sections = sections;
     this.visits = visits;
