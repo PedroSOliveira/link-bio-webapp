@@ -5,8 +5,11 @@ export class AxiosHttpClient implements IHttpClient {
   private axiosInstance: AxiosInstance;
 
   constructor() {
-    this.axiosInstance = axios.create({ baseURL: "http://localhost:8080/v1" });
+    this.axiosInstance = axios.create({ baseURL: "https://link-bio-api-ec02a3bea4fe.herokuapp.com/v1" });
   }
+
+  //http://localhost:8080/v1"
+  // https://link-bio-api-ec02a3bea4fe.herokuapp.com/v1/pages
 
   async get(url: string, params?: Record<string, unknown>) {
     const response = await this.axiosInstance.get(url, { params });
