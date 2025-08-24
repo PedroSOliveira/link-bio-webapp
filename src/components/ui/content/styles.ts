@@ -1,5 +1,7 @@
 "use client";
 import styled, { css } from "styled-components";
+import Image from "next/image"; // Recomenda-se para Next.js
+import { MdImageNotSupported } from "react-icons/md";
 
 export const SectionContainer = styled.div<{}>`
   width: 90%;
@@ -79,4 +81,26 @@ export const ImagePlaceholder = styled.div`
   align-items: center;
   font-size: 40px;
   color: #999;
+`;
+
+export const StyledImageContainer = styled.div`
+  width: 100%;
+  height: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+`;
+
+export const StyledImageComponent = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const StyledImagePlaceholder = styled(MdImageNotSupported)`
+  color: #999;
+  font-size: 40px;
 `;

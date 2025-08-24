@@ -38,7 +38,7 @@ export const SocialIconsView: React.FC<ISocialIconsViewProps> = ({
   return (
     <IconsContainer>
       {socialMedias.map((media: SocialMediaData, index) => {
-        const iconKey = media.icon.toLowerCase();
+        const iconKey = media.text.toLowerCase();
         const IconComponent = iconMap[iconKey];
 
         if (!IconComponent) {

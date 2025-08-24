@@ -20,10 +20,6 @@ export const LandingPage: React.FC<ILandingPageProps> = ({
     >
       <MainContent>
         {landingPage.sections.map((section, index) => {
-          // if (!section.enabled) {
-          //   return null;
-          // }
-
           switch (section.type) {
             case SectionType.HEADER:
               return (

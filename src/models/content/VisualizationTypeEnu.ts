@@ -1,6 +1,6 @@
 export enum VisualizationType {
-  imageTopTextBelow = "imageTopTextBelow",
-  imageLeftTextRight = "imageLeftTextRight",
-  imageRightTextLeft = "imageRightTextLeft",
-  textOnlyVertical = "textOnlyVertical",
+  IMAGE_TOP_TEXT_BELOW = "IMAGE_TOP_TEXT_BELOW",
+  IMAGE_LEFT_TEXT_RIGHT = "IMAGE_LEFT_TEXT_RIGHT",
+  IMAGE_RIGHT_TEXT_LEFT = "IMAGE_RIGHT_TEXT_LEFT",
+  TEXT_ONLY_VERTICAL = "TEXT_ONLY_VERTICAL",
 }

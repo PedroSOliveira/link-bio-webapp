@@ -18,15 +18,25 @@ export const ContentSection: React.FC<IContentSectionProps> = ({
   theme,
   contentData,
 }) => {
-  const { title, description, visualization, button } = contentData;
+  const { title, description, visualization, button, image } = contentData;
 
   const renderContent = () => {
     switch (visualization) {
-      case VisualizationType.imageTopTextBelow:
+      case VisualizationType.IMAGE_TOP_TEXT_BELOW:
         return (
           <CardContainer $backgroundColor={theme.backgroundColor}>
             <ColumnLayout>
-              <ImagePlaceholder>📸</ImagePlaceholder>
+              {image && (
+                <ImagePlaceholder>
+                  <img
+                    src={`assets/${image}`}
+                    alt={title}
+                    width="150"
+                    height="150"
+                    style={{ borderRadius: "10px" }}
+                  />
+                </ImagePlaceholder>
+              )}
               <TextContent>
                 <Title $color={theme.textPrimaryColor}>{title}</Title>
                 <Description $color={theme.textPrimaryColor}>
@@ -48,11 +58,21 @@ export const ContentSection: React.FC<IContentSectionProps> = ({
           </CardContainer>
         );
 
-      case VisualizationType.imageLeftTextRight:
+      case VisualizationType.IMAGE_LEFT_TEXT_RIGHT:
         return (
           <CardContainer $backgroundColor={theme.backgroundColor}>
             <RowLayout>
-              <ImagePlaceholder>📸</ImagePlaceholder>
+              {image && (
+                <ImagePlaceholder>
+                  <img
+                    src={`assets/${image}`}
+                    alt={title}
+                    width="150"
+                    height="150"
+                    style={{ borderRadius: "10px" }}
+                  />
+                </ImagePlaceholder>
+              )}
               <TextContent>
                 <Title $color={theme.textPrimaryColor}>{title}</Title>
                 <Description $color={theme.textPrimaryColor}>
@@ -74,7 +94,7 @@ export const ContentSection: React.FC<IContentSectionProps> = ({
           </CardContainer>
         );
 
-      case VisualizationType.imageRightTextLeft:
+      case VisualizationType.IMAGE_RIGHT_TEXT_LEFT:
         return (
           <CardContainer $backgroundColor={theme.backgroundColor}>
             <RowLayout>
@@ -95,12 +115,22 @@ export const ContentSection: React.FC<IContentSectionProps> = ({
                   </ButtonContainer>
                 )}
               </TextContent>
-              <ImagePlaceholder>📸</ImagePlaceholder>
+              {image && (
+                <ImagePlaceholder>
+                  <img
+                    src={`assets/${image}`}
+                    alt={title}
+                    width="150"
+                    height="150"
+                    style={{ borderRadius: "10px" }}
+                  />
+                </ImagePlaceholder>
+              )}
             </RowLayout>
           </CardContainer>
         );
 
-      case VisualizationType.textOnlyVertical:
+      case VisualizationType.TEXT_ONLY_VERTICAL:
         return (
           <CardContainer $backgroundColor={theme.backgroundColor}>
             <ColumnLayout>

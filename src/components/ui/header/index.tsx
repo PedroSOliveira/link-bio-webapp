@@ -13,13 +13,20 @@ export const HeaderSection: React.FC<IHeaderSectionProps> = ({
   theme,
   headerData,
 }) => {
-    
   const sectionWidth = 360 * 0.9;
   const textWidth = 360 * 0.7;
-  const { title, description } = headerData;
+  const { title, description, image } = headerData;
   const sectionContent = (
     <SectionContent>
-      <ProfileImage $buttonPrimaryColor={theme.buttonPrimaryColor} />
+      {image && (
+        <img
+          src={`assets/${image}`}
+          alt={title}
+          width="150"
+          height="150"
+          style={{ borderRadius: "100px" }}
+        />
+      )}
       <TextContainer $width={textWidth}>
         <Title $color={theme.textPrimaryColor}>{title}</Title>
         <Description $color={theme.textPrimaryColor}>{description}</Description>
