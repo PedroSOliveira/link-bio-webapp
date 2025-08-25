@@ -1,11 +1,15 @@
 import axios, { AxiosInstance } from "axios";
 import { IHttpClient } from "./ApiInterface";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export class AxiosHttpClient implements IHttpClient {
   private axiosInstance: AxiosInstance;
 
   constructor() {
-    this.axiosInstance = axios.create({ baseURL: "https://link-bio-api-ec02a3bea4fe.herokuapp.com/v1" });
+    this.axiosInstance = axios.create({
+      baseURL: API_URL,
+    });
   }
 
   //http://localhost:8080/v1"
