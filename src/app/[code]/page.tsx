@@ -6,6 +6,8 @@ import { LandingPage } from "@/components/ui/landing-page";
 import { LandingPageModel } from "@/models/landing-page/LandingPageData";
 import { allDefaulThemes, DefaultThemes } from "@/models/theme/ThemeData";
 import { apiService } from "@/services/resources/apiService";
+import { Loading } from "@/components/loading";
+import NotFoundPage from "@/app/not-found";
 
 export default function Page() {
   const params = useParams();
@@ -37,15 +39,11 @@ export default function Page() {
   }, [code]);
 
   if (isLoading) {
-    return <div>Carregando...</div>;
+    return <Loading />;
   }
 
-  if (error) {
-    return <div>{error}</div>;
-  }
-
-  if (!landingPageData) {
-    return <div>Página não encontrada.</div>;
+  if (!landingPageData || error) {
+    return <NotFoundPage />;
   }
 
   return (
